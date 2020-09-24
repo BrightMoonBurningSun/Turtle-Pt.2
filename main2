@@ -1,0 +1,201 @@
+import turtle
+
+
+def norm():
+    turtle.penup()
+    turtle.backward(100)
+    turtle.right(90)
+    turtle.forward(50)
+    turtle.right(180)
+
+
+def zero():
+    for _ in range(2):
+        turtle.forward(50)
+        turtle.right(90)
+        turtle.forward(100)
+        turtle.right(90)
+
+
+def one():
+    turtle.penup()
+    turtle.right(90)
+    turtle.forward(50)
+    turtle.pendown()
+    turtle.left(135)
+    turtle.forward(71)
+    turtle.right(135)
+    turtle.forward(100)
+
+    norm()
+
+
+def two():
+    turtle.forward(50)
+    turtle.right(90)
+    turtle.forward(50)
+    turtle.right(45)
+    turtle.forward(71)
+    turtle.left(135)
+    turtle.forward(50)
+    turtle.right(90)
+
+    norm()
+
+
+def three():
+    for _ in range(2):
+        turtle.forward(50)
+        turtle.right(135)
+        turtle.forward(71)
+        turtle.left(135)
+    turtle.penup()
+    turtle.forward(50)
+    turtle.right(90)
+
+    norm()
+
+
+def four():
+    turtle.right(90)
+    turtle.forward(50)
+    for _ in range(2):
+        turtle.left(90)
+        turtle.forward(50)
+    turtle.right(180)
+    turtle.forward(100)
+
+    norm()
+
+
+def five():
+    turtle.penup()
+    turtle.forward(50)
+    turtle.pendown()
+    turtle.right(180)
+    for _ in range(2):
+        turtle.forward(50)
+        turtle.left(90)
+    for _ in range(2):
+        turtle.forward(50)
+        turtle.right(90)
+    turtle.forward(50)
+    turtle.penup()
+    turtle.left(180)
+    turtle.forward(50)
+    turtle.right(90)
+
+    norm()
+
+
+def six():
+    turtle.penup()
+    turtle.forward(50)
+    turtle.pendown()
+    turtle.right(135)
+    turtle.forward(71)
+    turtle.left(45)
+    for _ in range(3):
+        turtle.forward(50)
+        turtle.left(90)
+    turtle.forward(50)
+    turtle.penup()
+    for _ in range(2):
+        turtle.left(90)
+        turtle.forward(50)
+    turtle.right(90)
+
+    norm()
+
+
+def seven():
+    turtle.forward(50)
+    turtle.right(135)
+    turtle.forward(71)
+    turtle.left(45)
+    turtle.forward(50)
+    turtle.penup()
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.right(90)
+
+    norm()
+
+
+def eight():
+    turtle.forward(50)
+    turtle.right(90)
+    turtle.forward(100)
+    for _ in range(3):
+        turtle.right(90)
+        turtle.forward(50)
+    turtle.right(180)
+    turtle.forward(50)
+    turtle.right(90)
+    turtle.forward(50)
+    turtle.right(180)
+    turtle.forward(100)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.right(90)
+
+    norm()
+
+
+def nine():
+    turtle.penup()
+    turtle.right(45)
+    turtle.forward(71)
+    turtle.right(135)
+    turtle.pendown()
+    for _ in range(4):
+        turtle.forward(50)
+        turtle.right(90)
+    turtle.left(45)
+    turtle.forward(71)
+    turtle.left(135)
+    turtle.penup()
+    turtle.forward(50)
+    turtle.right(90)
+
+    norm()
+
+
+# def draw_number(n):
+# if n == '0':
+# zero()
+# elif n == '1':
+# one()
+# elif n == '2':
+# two()
+# elif n == '3':
+# three()
+# elif n == '4':
+# four()
+# elif n == '5':
+# five()
+# elif n == '6':
+# six()
+# elif n == '7':
+# seven()
+# elif n == '8':
+# eight()
+# elif n == '9':
+# nine()
+# else:
+# print('nope')
+
+
+data = ['zero()', 'one()', 'two()', 'three()', 'four()', 'five()', 'six()', 'seven()', 'eight()', 'nine()']
+turtle.shape('turtle')
+
+turtle.penup()
+turtle.goto(-350, 300)
+turtle.pendown()
+nums = list(map(int, '141700'))
+for x in nums:
+    turtle.pendown()
+    eval(data[x])
+    turtle.penup()
+    turtle.forward(60)
+    turtle.pendown()
